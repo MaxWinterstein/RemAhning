@@ -41,7 +41,7 @@ function ScreenUpdate(LocalContext)
     lcd.setColor(CUSTOM_COLOR, LocalContext.options.Color)
 
     lcd.drawText(LocalContext.zone.x + LocalContext.zone.w,
-                 LocalContext.zone.y + 50, "mAh", CUSTOM_COLOR + RIGHT + SMLSIZE)
+                 LocalContext.zone.y + 50, "mAh", CUSTOM_COLOR + RIGHT + SMLSIZE + SHADOWED)
 
     if (remaining - reserve <= 0) then
         lcd.drawText(LocalContext.zone.x, LocalContext.zone.y + 2, remaining,
