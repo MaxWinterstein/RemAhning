@@ -1,4 +1,4 @@
-# RemAhning - Horus Widget to display remaining mAh
+# RemAhning - Horus widget to display remaining mAh
 
 I was in need of a simple widget that displays the remaining mAh of my battery pack.  
 As there was no such thing out of the box i tinkered around with lua and ended up with this little script.
@@ -6,6 +6,9 @@ As there was no such thing out of the box i tinkered around with lua and ended u
 Currently only one layout and size it supported.
 
 ## Installation
+Simply copy the _RemAhning_ folder inside your _WIDGETS_ folder on your SD card.  
+It should look like this: `X:/WIDGETS/RemAhning/main.lua` .
+
 You might need to manually add a _calculated_ sensor to get the used capacity. We well call it _used_ for now.  
 ![Sensor Screenshot](/screenshot_sensor.png?raw=true "Sensor Screenshot")
 
