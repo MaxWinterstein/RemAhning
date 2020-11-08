@@ -29,6 +29,8 @@ local function update(Context, options) Context.options = options end
 function calc(LocalContext)
     total = LocalContext.options.Capacity
     used = getValue(LocalContext.options.Source)
+    reserve = LocalContext.options.Reserve
+
     if (used == nil) then used = total end
 
     remaining = total - used
@@ -41,7 +43,7 @@ function ScreenUpdate(LocalContext)
     lcd.drawText(LocalContext.zone.x + LocalContext.zone.w,
                  LocalContext.zone.y + 50, "mAh", CUSTOM_COLOR + RIGHT + SMLSIZE)
 
-    if (remaining <= 0) then
+    if (remaining - reserve <= 0) then
         lcd.drawText(LocalContext.zone.x, LocalContext.zone.y + 2, remaining,
                      CUSTOM_COLOR + XXLSIZE + BLINK + INVERS + SHADOWED)
 
